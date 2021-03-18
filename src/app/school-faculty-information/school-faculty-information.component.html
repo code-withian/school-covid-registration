@@ -1,0 +1,34 @@
+<form>
+  <p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Student Count</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Teacher Count</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Staff Count</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </p>
+  <h4>Grade</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Select Grade</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="grade">
+      <mat-option *ngFor="let grade of grades" [value]="grade.value">
+        {{ grade.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <h4>School Type</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Select School Type</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="type">
+      <mat-option *ngFor="let type of types" [value]="type.value">
+        {{ type.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

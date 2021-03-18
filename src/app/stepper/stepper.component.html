@@ -1,0 +1,22 @@
+<mat-vertical-stepper>
+  <mat-step>
+    <ng-template matStepLabel>School Information</ng-template>
+    <app-school-information></app-school-information>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel
+      >Primary Doctor / Physician Contact Information</ng-template
+    >
+    <app-doctor-contact-information></app-doctor-contact-information>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>School Faculty Information</ng-template>
+    <app-school-faculty-information></app-school-faculty-information>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext (click)="openDialog()">Submit</button>
+  </mat-step>
+</mat-vertical-stepper>

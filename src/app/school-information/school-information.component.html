@@ -1,0 +1,38 @@
+<form>
+  <h4>State</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Select State</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="state">
+      <mat-option *ngFor="let state of states" [value]="state.value">
+        {{ state.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <h4>School District</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Select School District</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="district">
+      <!-- <mat-option *ngFor="let district of states" [value]="state.value">
+        {{ state.viewValue }}
+      </mat-option> -->
+    </mat-select>
+  </mat-form-field>
+  <p>
+    <mat-form-field class="example-full-width">
+      <mat-label>School Name</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Street</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>City</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Zip</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </p>
+</form>
